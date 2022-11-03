@@ -1,0 +1,29 @@
+{
+    "name" : "peer-twitch",
+    "version" : "1.0",
+    "description" : "peer-twitch",
+
+    "permissions": [
+        "webRequest"
+    ],
+    "host_permissions": [
+        "*://*.example.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    
+    "content_scripts": [
+        {
+            "matches": ["*://*.example.com/*"],
+            "js": [
+                "peer_twitch.js", "run_wasm.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [{
+        "resources": ["peer_twitch_bg.wasm"],
+        "matches": ["*://*.example.com/*"]
+    }],
+    "manifest_version": 3
+}
