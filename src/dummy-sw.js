@@ -11,4 +11,4 @@ self.fetch = function() {
         })
 }
 
-importScripts("https://static.twitchcdn.net/assets/amazon-ivs-wasmworker.min-75a2c99f45ecb5aa3225.js");
+importScripts(location.href);
