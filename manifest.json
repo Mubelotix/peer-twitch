@@ -3,21 +3,11 @@
     "version" : "1.0",
     "description" : "peer-twitch",
     "permissions": [
-        "webRequest",
         "declarativeNetRequest",
         "declarativeNetRequestFeedback"
     ],
 
-    "declarative_net_request": {
-        "rule_resources": [{
-            "id": "ruleset_1",
-            "enabled": true,
-            "path": "rules.json"
-        }]
-    },
-
     "host_permissions": [
-        "https://*.hls.ttvnw.net/v1/playlist/*.m3u8",
         "https://*.twitch.tv/*",
         "https://*.twitchcdn.net/*"
     ],
