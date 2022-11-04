@@ -7,23 +7,22 @@
         "webRequest"
     ],
     "host_permissions": [
-        "*://*.example.com/*"
+        "https://*.hls.ttvnw.net/v1/playlist/*.m3u8",
+        "https://*.twitch.tv/*"
     ],
     "background": {
         "service_worker": "background.js"
     },
     
-    "content_scripts": [
-        {
-            "matches": ["*://*.example.com/*"],
-            "js": [
-                "peer_twitch.js", "run_wasm.js"
-            ]
-        }
-    ],
+    "content_scripts": [{
+        "matches": ["https://*.twitch.tv/*"],
+        "js": [
+            "peer_twitch.js", "run_wasm.js"
+        ]
+    }],
     "web_accessible_resources": [{
-        "resources": ["peer_twitch_bg.wasm"],
-        "matches": ["*://*.example.com/*"]
+        "resources": ["peer_twitch_bg.wasm", "fetch.js", "sw.js"],
+        "matches": ["https://*.twitch.tv/*"]
     }],
     "manifest_version": 3
 }
