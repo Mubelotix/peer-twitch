@@ -24,8 +24,8 @@ else
 fi
 
 cp src/background.js pkg/background.js
+cp src/dummy-sw.js pkg/dummy-sw.js
 cp rules.json pkg/rules.json
-cp hello.js pkg/hello.js
 
 printf "
 const runtime = chrome.runtime || browser.runtime;

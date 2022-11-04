@@ -32,7 +32,7 @@
         ]
     }],
     "web_accessible_resources": [{
-        "resources": ["peer_twitch_bg.wasm", "fetch.js", "sw.js", "hello.js"],
+        "resources": ["peer_twitch_bg.wasm", "dummy-sw.js"],
         "matches": ["https://*.twitch.tv/*"]
     }],
     "manifest_version": 3
