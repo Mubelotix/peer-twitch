@@ -10,11 +10,8 @@ browser.declarativeNetRequest.updateSessionRules({
     addRules:[{
         "id": 1337,
         "priority": 1,
-        "action": {
-            "type": "redirect",
-            "redirect": { "regexSubstitution": dummy_sw_url + "?url=\\0" }
-        },
-        "condition": { "regexFilter": "^https://static.twitchcdn.net/assets/amazon-ivs-wasmworker.min-(.*)" }
+        "action": { "type": "redirect", "redirect": { "url": dummy_sw_url } },
+        "condition": { "urlFilter": "https://static.twitchcdn.net/assets/amazon-ivs-wasmworker.min-*.js" },
     }],
     removeRuleIds: []
 });
