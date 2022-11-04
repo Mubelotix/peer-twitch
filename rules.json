@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "priority": 1,
+        "action": {
+            "type": "modifyHeaders",
+            "responseHeaders": [{ "header": "cache-control", "operation": "set", "value": "public, max-age=60, immutable" }]
+        },
+        "condition": { "urlFilter": "||ttvnw.net/v1/segment/*.ts" }
+    }
+]
